@@ -6,25 +6,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.print("Bem vindo, inicialize as disciplinas! \n");
 
-        int quantidade_disciplinas;
-        int quantidade_alunosG;
-
-        int quantidade_alunosPG;
-        String estagio;
-        int cra;
-        String nome;
-        String cpf;
-        String dataNascimento;
-        String tema;
-        String ano;
-        String periodo;
-        String nomeDisciplina;
-        String codigo;
-        String cargaHoraria;
+        int quantidade_disciplinas, quantidade_alunosG, quantidade_alunosPG, cra;
+        String nome, cpf, dataNascimento, tema, ano, periodo, nomeDisciplina, codigo, cargaHoraria, nomeProfessor, departamento, inicioContrato, estagio;
         Professor professor;
-        String nomeProfessor;
-        String departamento;
-        String inicioContrato;
+
 
         System.out.print("Digite a quantidade de disciplinas: ");
         quantidade_disciplinas = sc.nextInt();
