@@ -89,8 +89,17 @@ public class Main {
 
             turma[x] = new Turmas(codigo, nomeDisciplina, cargaHoraria, alunosG, alunosPG, professor, ano, periodo);
             System.out.print(professor+"\n");
-            System.out.print(alunosG[0] +"\n");
-            System.out.print(alunosPG[0] +"\n");
+            int j = 0;
+            while (j<quantidade_alunosG) {
+                System.out.print(alunosG[j] + "\n");
+                j = j + 1;
+            }
+
+            j = 0;
+            while (j<quantidade_alunosPG) {
+                System.out.print(alunosPG[j] + "\n");
+                j = j + 1;
+            }
 
         }
     }
