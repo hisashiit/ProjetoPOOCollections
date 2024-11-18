@@ -9,8 +9,7 @@ public class PosGraduacao extends Estudantes {
     @Override
     public String toString() {
         return super.toString() + " EstudantePosGraduacao{" +
-                "tema= '" + tema + '\'' +
-                '}';
+                "tema= '" + tema + "'" + '}';
     }
 
 }

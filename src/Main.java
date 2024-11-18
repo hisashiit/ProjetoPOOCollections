@@ -65,7 +65,7 @@ public class Main {
                 alunosG[y] = new Graduacao(estagio, cra, nome, cpf, dataNascimento);
             }
 
-            System.out.print("Quantidade de alunos em pós-graduação na turma " + quantidade_disciplinas + "");
+            System.out.print("Quantidade de alunos em pós-graduação na turma " + quantidade_disciplinas + " ");
             quantidade_alunosPG = sc.nextInt();
             sc.nextLine();
             PosGraduacao[] alunosPG = new PosGraduacao[quantidade_alunosPG];
@@ -87,7 +87,7 @@ public class Main {
             }
 
 
-            turma[x] = new Turmas(codigo, nomeDisciplina, cargaHoraria, alunosG, alunosPG, professor, ano, periodo);
+            turma[x] = new Turmas(codigo, nomeDisciplina, cargaHoraria, alunosG, alunosPG, professor, ano, periodo, quantidade_alunosG, quantidade_alunosPG);
             System.out.print(professor+"\n");
             int j = 0;
             while (j<quantidade_alunosG) {
@@ -100,6 +100,13 @@ public class Main {
                 System.out.print(alunosPG[j] + "\n");
                 j = j + 1;
             }
+            j = 0;
+
+            while(j<quantidade_disciplinas){
+                turma[j].print();
+                j = j+1;
+            }
+
 
         }
     }
