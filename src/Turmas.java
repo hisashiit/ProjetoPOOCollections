@@ -24,7 +24,7 @@ public class Turmas extends Disciplina {
 
         int j = 0;
         System.out.println("---------------------Turma cadastrada--------------------------");
-        System.out.print(super.toString()+ "\n" + "professor: " + professor);
+        System.out.print(super.toString() + "\n" + "Ano: '" + ano + "', Periodo: '"+ periodo + "'" + "\n" + "Professor: " + professor);
         System.out.println(" ");
         System.out.println("AlunosDaGraduacao cadastrados: ");
         while (j<qtdGrad)
