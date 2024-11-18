@@ -12,4 +12,9 @@ public class PosGraduacao extends Estudantes {
                 "tema= '" + tema + "'" + '}';
     }
 
+    public void print() {
+        super.print();
+        System.out.print(" EstudantePosGraduacao{" + "tema= '" + tema + "'" + '}');
+    }
+
 }

@@ -1,9 +1,7 @@
-import java.sql.SQLOutput;
-
 public class Turmas extends Disciplina {
-    private Graduacao[] graduacao;
-    private PosGraduacao[] posGraduacao;
-    private Professor professor;
+    public Graduacao[] graduacao;
+    public PosGraduacao[] posGraduacao;
+    public Professor professor;
     private String ano;
     private String periodo;
     public int qtdPosGrad;
@@ -24,19 +22,22 @@ public class Turmas extends Disciplina {
 
         int j = 0;
         System.out.println("---------------------Turma cadastrada--------------------------");
-        System.out.print(super.toString() + "\n" + "Ano: '" + ano + "', Periodo: '"+ periodo + "'" + "\n" + "Professor: " + professor);
+        System.out.print(super.toString() + "\n" + "Ano: '" + ano + "', Periodo: '"+ periodo + "'" + "\n" + "Professor: ");
+        professor.print();
         System.out.println(" ");
         System.out.println("AlunosDaGraduacao cadastrados: ");
         while (j<qtdGrad)
         {
-            System.out.print(graduacao[j].toString()+"\n");
+            graduacao[j].print();
+            System.out.println(" ");
             j = j+1;
         }
         j = 0;
         System.out.println("AlunosDaPosGraduacao cadastrados: ");
         while (j<qtdPosGrad)
         {
-            System.out.print(posGraduacao[j].toString() + "\n");
+            posGraduacao[j].print();
+            System.out.println(" ");
             j = j+1;
         }
         System.out.println(" ");

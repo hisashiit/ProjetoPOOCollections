@@ -13,4 +13,8 @@ public class Graduacao extends Estudantes{
                 '}';
     }
 
+    public void print() {
+        super.print();
+        System.out.print(" EstudanteGraduacao{" + "estagio='" + estagio + "'" + '}');
+    }
 }

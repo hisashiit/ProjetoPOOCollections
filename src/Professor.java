@@ -1,6 +1,6 @@
 public class Professor extends Pessoa {
-    private String inicioContrato;
-    private String departamento;
+    public String inicioContrato;
+    public String departamento;
 
 
     public Professor(String inicioContrato, String departamento,String nome, String cpf, String dataNascimento) {
@@ -15,5 +15,10 @@ public class Professor extends Pessoa {
                 "Departamento= '" + departamento + '\'' +
                 ", inicioContrato= '" + inicioContrato + '\'' +
                 '}';
+    }
+
+    public void print(){
+        System.out.print("Professor{" + "nome= '" + nome + "', CPF= '" + cpf + "', dataNascimento= '" + dataNascimento + "', inicioContrato= '"+ inicioContrato
+                + ", departamento= '" + departamento + "'}");
     }
 }

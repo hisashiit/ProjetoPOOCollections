@@ -1,4 +1,4 @@
-public class Pessoa {
+public abstract class Pessoa {
     protected String nome;
     protected String cpf;  // CPF agora é String
     protected String dataNascimento;
@@ -17,4 +17,5 @@ public class Pessoa {
                 '}';
     }
 
+    public abstract void print();
 }
