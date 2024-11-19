@@ -2,6 +2,4 @@
 # ProjetoFinal
 ProjetoFinal de POO
 =======
-# ProjetoPOOCollections
-Adicionando collections ao Projeto Final POO
->>>>>>> origin/main
+Utilizacao de POO + Collections para a escrita e leitura de arquivos
