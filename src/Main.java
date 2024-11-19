@@ -5,12 +5,10 @@ public class Main {
         String caminhoArquivo = "dados.bin";
         String caminhoArquivo2 = "aluno.bin";
         try (DataInputStream in = new DataInputStream(new FileInputStream(caminhoArquivo))) {
-            // Read number of disciplines
-
+            // QTD DE DISCIPLINAS
             int quantidade_disciplinas = in.readInt(); //1
             System.out.println("Lendo numero de disciplinas: " + quantidade_disciplinas);
             Turmas[] turma = new Turmas[quantidade_disciplinas];
-            // Loop through disciplines
             for (int x = 0; x < quantidade_disciplinas; x++) {
                 String ano = in.readUTF();
                 String periodo = in.readUTF();
@@ -27,7 +25,7 @@ public class Main {
                 System.out.println("Reading discipline: " + nomeDisciplina);
                 System.out.println("Professor: " + nomeProfessor + ", CPF: " + cpf);
 
-                // Read number of graduation students
+                // ESTUDANTES DE GRADUACAO
                 int quantidade_alunosG = in.readInt();
                 System.out.println("Lendo numero de estudantes graduados: " + quantidade_alunosG);
                 Graduacao[] alunosG = new Graduacao[quantidade_alunosG];
@@ -41,7 +39,7 @@ public class Main {
                     System.out.println("Aluno de Graduação: " + nomeAlunoG + " Estágio: " + estagio + " CRA: " + cra);
                 }
 
-                // Read number of post-graduation students
+                // ESTUDANTES DE POSGRADUACAO
                 int quantidade_alunosPG = in.readInt();
                 System.out.println("Lendo numero de estudantes de pos graduacao: " + quantidade_alunosPG);
                 PosGraduacao[] alunosPG = new PosGraduacao[quantidade_alunosPG];
