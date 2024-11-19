@@ -1,4 +1,6 @@
-public class Disciplina {
+import java.io.Serializable;
+
+public class Disciplina{
     protected String codigo;
     protected String nomeDisciplina;
     protected String cargaHoraria;

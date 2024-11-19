@@ -1,4 +1,5 @@
-public class Turmas extends Disciplina {
+import java.io.Serializable;
+public class Turmas extends Disciplina implements Serializable {
     public Graduacao[] graduacao;
     public PosGraduacao[] posGraduacao;
     public Professor professor;

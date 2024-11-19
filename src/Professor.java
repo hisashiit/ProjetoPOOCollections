@@ -1,4 +1,5 @@
-public class Professor extends Pessoa {
+import java.io.Serializable;
+public class Professor extends Pessoa  implements Serializable {
     public String inicioContrato;
     public String departamento;
 

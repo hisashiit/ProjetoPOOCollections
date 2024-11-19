@@ -1,4 +1,5 @@
-public class PosGraduacao extends Estudantes {
+import java.io.Serializable;
+public class PosGraduacao extends Estudantes implements Serializable  {
     private String tema;
 
     public PosGraduacao(String tema, int cra, String nome, String cpf, String dataNascimento) {

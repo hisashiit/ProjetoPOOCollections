@@ -1,4 +1,5 @@
-public class Graduacao extends Estudantes{
+import java.io.Serializable;
+public class Graduacao extends Estudantes implements Serializable{
     private String estagio;
 
     public Graduacao(String estagio, int cra, String nome, String cpf, String dataNascimento) {
