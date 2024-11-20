@@ -1,4 +1,4 @@
-public abstract class Pessoa {
+public abstract class Pessoa implements Printar{
     protected String nome;
     protected String cpf;  // CPF agora é String
     protected String dataNascimento;

@@ -1,4 +1,4 @@
-public class Estudantes extends Pessoa{
+public class Estudantes extends Pessoa implements Printar{
     public int cra;
 
     public Estudantes(int cra, String nome, String cpf, String dataNascimento) {

@@ -55,11 +55,6 @@ public class EscreverBinario {
             out.writeUTF("Maria Rita");
             out.writeUTF("18231294224");
             out.writeUTF("11/02/1995");
-
-
-
-
-
             System.out.println("Dados gravados com sucesso!");
         } catch (IOException e) {
             System.out.println("Erro ao gravar o arquivo: " + e.getMessage());

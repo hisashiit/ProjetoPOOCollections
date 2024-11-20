@@ -1,5 +1,5 @@
 import java.io.Serializable;
-public class Professor extends Pessoa  implements Serializable {
+public class Professor extends Pessoa  implements Serializable, Printar {
     public String inicioContrato;
     public String departamento;
 
@@ -10,7 +10,7 @@ public class Professor extends Pessoa  implements Serializable {
         this.departamento = departamento;
     }
 
-    @Override
+
     public String toString() {
         return super.toString() + " Professor{" +
                 "Departamento= '" + departamento + '\'' +

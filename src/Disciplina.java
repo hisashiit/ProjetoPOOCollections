@@ -1,6 +1,6 @@
 import java.io.Serializable;
 
-public class Disciplina{
+public class Disciplina implements Printar{
     protected String codigo;
     protected String nomeDisciplina;
     protected String cargaHoraria;

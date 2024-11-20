@@ -1,5 +1,5 @@
 import java.io.Serializable;
-public class Graduacao extends Estudantes implements Serializable{
+public class Graduacao extends Estudantes implements Serializable, Printar{
     private String estagio;
 
     public Graduacao(String estagio, int cra, String nome, String cpf, String dataNascimento) {
@@ -7,7 +7,7 @@ public class Graduacao extends Estudantes implements Serializable{
         this.estagio = estagio;
     }
 
-    @Override
+
     public String toString() {
         return super.toString() + " EstudanteGraduacao{" +
                 "estagio='" + estagio + "'" +
