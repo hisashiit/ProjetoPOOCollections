@@ -11,6 +11,10 @@ public class Disciplina implements Printar{
         this.cargaHoraria = cargaHoraria;
     }
 
+    public String getNomeDisciplina() {
+        return nomeDisciplina;
+    }
+
     @Override
     public String toString() {
         return "Disciplina{" +
