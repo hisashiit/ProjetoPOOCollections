@@ -19,14 +19,17 @@ public class Turmas extends Disciplina implements Serializable {
         this.qtdPosGrad = qtdPosGrad;
     }
 
-    public void print() {
-
+    public void print() throws ErroMain {
+        if (graduacao == null || posGraduacao == null || professor == null || ano == null || periodo == null ||
+                graduacao.length == 0 || posGraduacao.length == 0) {
+            throw new ErroMain("Valores não iniciados\n");
+        }
         int j = 0;
-        System.out.println("---------------------Turma cadastrada--------------------------");
+        System.out.println("\n\n---------------------Turma cadastrada--------------------------");
         System.out.print(super.toString() + "\n" + "Ano: '" + ano + "', Periodo: '"+ periodo + "'" + "\n" + "Professor: ");
         professor.print();
         System.out.println(" ");
-        System.out.println("AlunosDaGraduacao cadastrados: ");
+        System.out.println("\n\n------------------AlunosDaGraduacao cadastrados-----------------------");
         while (j<qtdGrad)
         {
             graduacao[j].print();
@@ -34,7 +37,7 @@ public class Turmas extends Disciplina implements Serializable {
             j = j+1;
         }
         j = 0;
-        System.out.println("AlunosDaPosGraduacao cadastrados: ");
+        System.out.println("\n\n------------------AlunosDaPosGraduacao cadastrados-----------------------");
         while (j<qtdPosGrad)
         {
             posGraduacao[j].print();

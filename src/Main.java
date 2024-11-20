@@ -23,11 +23,11 @@ public class Main {
                 Professor professor = new Professor(inicioContrato, departamento, nomeProfessor, cpf, dataNascimento);
 
                 System.out.println("Reading discipline: " + nomeDisciplina);
-                System.out.println("Professor: " + nomeProfessor + ", CPF: " + cpf);
+                System.out.println("\n\nProfessor: " + nomeProfessor + ", \nCPF: " + cpf);
 
                 // ESTUDANTES DE GRADUACAO
                 int quantidade_alunosG = in.readInt();
-                System.out.println("Lendo numero de estudantes graduados: " + quantidade_alunosG);
+                System.out.println("\nLendo numero de estudantes graduados: " + quantidade_alunosG);
                 Graduacao[] alunosG = new Graduacao[quantidade_alunosG];
                 for (int y = 0; y < quantidade_alunosG; y++) {
                     String estagio = in.readUTF();
@@ -36,7 +36,7 @@ public class Main {
                     String cpfAlunoG = in.readUTF();
                     String dataNascimentoAlunoG = in.readUTF();
                     alunosG[y] = new Graduacao(estagio, cra, nomeAlunoG, cpfAlunoG, dataNascimentoAlunoG);
-                    System.out.println("Aluno de Graduação: " + nomeAlunoG + " Estágio: " + estagio + " CRA: " + cra);
+                    System.out.println("\n\nAluno de Graduação: " + nomeAlunoG + " \nEstágio: " + estagio + " \nCRA: " + cra);
                 }
 
                 // ESTUDANTES DE POSGRADUACAO
@@ -50,9 +50,12 @@ public class Main {
                     String cpfAlunoPG = in.readUTF();
                     String dataNascimentoAlunoPG = in.readUTF();
                     alunosPG[y] = new PosGraduacao(tema, cra, nomeAlunoPG, cpfAlunoPG, dataNascimentoAlunoPG);
-                    System.out.println("Aluno de Pós-Graduação: " + nomeAlunoPG + " Tema: " + tema + " CRA: " + cra);
+                    System.out.println("\n\nAluno de Pós-Graduação: " + nomeAlunoPG + " \nTema: " + tema + " \nCRA: " + cra);
                 }
                 turma[x] = new Turmas(codigo, nomeDisciplina, cargaHoraria, alunosG, alunosPG, professor, ano, periodo, quantidade_alunosG, quantidade_alunosPG);
+
+                System.out.println("\n\n---------------------Alunos cadastrados--------------------------");
+
 
                 int j = 0;
                 while (j<quantidade_alunosG) {
@@ -67,9 +70,14 @@ public class Main {
                 }
                 j = 0;
 
-                while(j<quantidade_disciplinas){
-                    turma[j].print();
-                    j = j+1;
+                while (j < quantidade_disciplinas) {
+                    try {
+                        turma[j].print();
+                    }
+                    catch (Exception e) {
+                        System.out.println("Erro: " + e + "\n");
+                    }
+                    j = j + 1;
                 }
 
                 // Gravou o objeto da classe Turma criado no arquivo aluno.bin
