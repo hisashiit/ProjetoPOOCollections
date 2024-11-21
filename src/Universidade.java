@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class Universidade{
     public static void main(String[] args) {
         String caminhoArquivo = "dados.bin";
         String caminhoArquivo2 = "aluno.bin";
