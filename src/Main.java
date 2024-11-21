@@ -217,6 +217,7 @@ public class Main {
 
                 if (verificador == 3) {
                     for (Turmas t : turma) {
+                        //verifica se acontece algum erro dentro da função printar de turmas
                         if (t != null) {
                             try {
                                 t.print();
@@ -228,7 +229,7 @@ public class Main {
                 }
 
             }
-
+        //Caso haja erro ao abrir arquivo o catch pega
         } catch (IOException e) {
             System.out.println("Erro ao ler o arquivo: " + e.getMessage());
         }
